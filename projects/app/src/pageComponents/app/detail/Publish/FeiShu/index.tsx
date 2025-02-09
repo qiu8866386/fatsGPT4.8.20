@@ -113,7 +113,7 @@ const FeiShu = ({ appId }: { appId: string }) => {
           <Thead>
             <Tr>
               <Th>{t('common:common.Name')}</Th>
-              <Th>{t('common:support.outlink.Usage points')}</Th>
+              {/* <Th>{t('common:support.outlink.Usage points')}</Th> */}
               {feConfigs?.isPlus && (
                 <>
                   <Th>{t('common:core.app.share.Ip limit title')}</Th>

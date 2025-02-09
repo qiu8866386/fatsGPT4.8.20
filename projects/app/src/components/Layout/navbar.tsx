@@ -44,13 +44,13 @@ const Navbar = ({ unread }: { unread: number }) => {
 
   const navbarList = useMemo(
     () => [
-      {
-        label: t('common:navbar.Chat'),
-        icon: 'core/chat/chatLight',
-        activeIcon: 'core/chat/chatFill',
-        link: `/chat?appId=${lastChatAppId}`,
-        activeLink: ['/chat']
-      },
+      // {
+      //   label: t('common:navbar.Chat'),
+      //   icon: 'core/chat/chatLight',
+      //   activeIcon: 'core/chat/chatFill',
+      //   link: `/chat?appId=${lastChatAppId}`,
+      //   activeLink: ['/chat']
+      // },
       {
         label: t('common:navbar.Studio'),
         icon: 'core/app/aiLight',
@@ -65,18 +65,18 @@ const Navbar = ({ unread }: { unread: number }) => {
         link: `/dataset/list`,
         activeLink: ['/dataset/list', '/dataset/detail']
       },
-      {
-        label: t('common:navbar.Toolkit'),
-        icon: 'phoneTabbar/tool',
-        activeIcon: 'phoneTabbar/toolFill',
-        link: `/toolkit`,
-        activeLink: ['/toolkit']
-      },
+      // {
+      //   label: t('common:navbar.Toolkit'),
+      //   icon: 'phoneTabbar/tool',
+      //   activeIcon: 'phoneTabbar/toolFill',
+      //   link: `/toolkit`,
+      //   activeLink: ['/toolkit']
+      // },
       {
         label: t('common:navbar.Account'),
         icon: 'support/user/userLight',
         activeIcon: 'support/user/userFill',
-        link: '/account/info',
+        link: '/account/model',
         activeLink: [
           '/account/bill',
           '/account/info',
@@ -110,7 +110,7 @@ const Navbar = ({ unread }: { unread: number }) => {
       bg={isSecondNavbarPage ? 'myGray.50' : 'transparent'}
     >
       {/* logo */}
-      <Box
+      {/* <Box
         flex={'0 0 auto'}
         mb={3}
         border={'2px solid #fff'}
@@ -120,7 +120,7 @@ const Navbar = ({ unread }: { unread: number }) => {
         onClick={() => router.push('/account/info')}
       >
         <Avatar w={'2rem'} h={'2rem'} src={userInfo?.avatar} borderRadius={'50%'} />
-      </Box>
+      </Box> */}
       {/* 导航列表 */}
       <Box flex={1}>
         {navbarList.map((item) => {
@@ -193,7 +193,7 @@ const Navbar = ({ unread }: { unread: number }) => {
         </Box>
       )}
 
-      {feConfigs?.navbarItems
+      {/* {feConfigs?.navbarItems
         ?.filter((item) => item.isActive)
         .map((item) => (
           <MyTooltip key={item.id} label={item.name} placement={'right-end'}>
@@ -210,9 +210,9 @@ const Navbar = ({ unread }: { unread: number }) => {
               <Avatar src={item.avatar} borderRadius={'md'} width={'26px'} height={'26px'} />
             </Link>
           </MyTooltip>
-        ))}
+        ))} */}
 
-      {feConfigs?.show_git && (
+      {/* {feConfigs?.show_git && (
         <MyTooltip label={`Git Star: ${gitStar}`} placement={'right-end'}>
           <Link
             as={NextLink}
@@ -227,7 +227,7 @@ const Navbar = ({ unread }: { unread: number }) => {
             <MyIcon name={'common/gitInlight'} width={'26px'} height={'26px'} />
           </Link>
         </MyTooltip>
-      )}
+      )} */}
     </Flex>
   );
 };

@@ -20,8 +20,8 @@ const OpenApiSchema = new Schema(
     },
     apiKey: {
       type: String,
-      required: true,
-      get: (val: string) => `******${val.substring(val.length - 4)}`
+      required: true
+      // get: (val: string) => `******${val.substring(val.length - 4)}`
     },
     createTime: {
       type: Date,

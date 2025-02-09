@@ -226,31 +226,31 @@ const Header = ({}: {}) => {
               menuList={[
                 {
                   children: [
-                    {
-                      label: (
-                        <Flex>
-                          <MyIcon name={'common/folderFill'} w={'20px'} mr={2} />
-                          {t('common:Folder')}
-                        </Flex>
-                      ),
-                      onClick: () => setEditFolderData({})
-                    },
-                    {
-                      label: (
-                        <Flex>
-                          <MyIcon name={'core/dataset/manualCollection'} mr={2} w={'20px'} />
-                          {t('common:core.dataset.Manual collection')}
-                        </Flex>
-                      ),
-                      onClick: () => {
-                        onOpenCreateVirtualFileModal({
-                          defaultVal: '',
-                          onSuccess: (name) => {
-                            onCreateCollection({ name, type: DatasetCollectionTypeEnum.virtual });
-                          }
-                        });
-                      }
-                    },
+                    // {
+                    //   label: (
+                    //     <Flex>
+                    //       <MyIcon name={'common/folderFill'} w={'20px'} mr={2} />
+                    //       {t('common:Folder')}
+                    //     </Flex>
+                    //   ),
+                    //   onClick: () => setEditFolderData({})
+                    // },
+                    // {
+                    //   label: (
+                    //     <Flex>
+                    //       <MyIcon name={'core/dataset/manualCollection'} mr={2} w={'20px'} />
+                    //       {t('common:core.dataset.Manual collection')}
+                    //     </Flex>
+                    //   ),
+                    //   onClick: () => {
+                    //     onOpenCreateVirtualFileModal({
+                    //       defaultVal: '',
+                    //       onSuccess: (name) => {
+                    //         onCreateCollection({ name, type: DatasetCollectionTypeEnum.virtual });
+                    //       }
+                    //     });
+                    //   }
+                    // },
                     {
                       label: (
                         <Flex>

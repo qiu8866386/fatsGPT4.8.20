@@ -35,8 +35,8 @@ const RouteTab = () => {
             {
               label: t('app:publish_channel'),
               id: TabEnum.publish
-            },
-            { label: t('app:chat_logs'), id: TabEnum.logs }
+            }
+            // { label: t('app:chat_logs'), id: TabEnum.logs }
           ]
         : [])
     ],

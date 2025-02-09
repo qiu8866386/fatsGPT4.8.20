@@ -176,7 +176,7 @@ const CreateModal = ({
         </Flex>
 
         <Flex mt={[4, 7]} mb={3}>
-          {type === AppTypeEnum.plugin ? (
+          {/* {type === AppTypeEnum.plugin ? (
             <FillRowTabs
               list={[
                 { label: t('app:create_by_template'), value: 'template' },
@@ -190,9 +190,9 @@ const CreateModal = ({
             <Box color={'myGray.900'} fontWeight={'bold'} fontSize={'sm'}>
               {t('app:create_by_template')}
             </Box>
-          )}
-          <Box flex={1} />
-          {isTemplateMode && (
+          )} */}
+          {/* <Box flex={1} /> */}
+          {/* {isTemplateMode && (
             <Flex
               onClick={() => onOpenTemplateModal(type)}
               alignItems={'center'}
@@ -204,7 +204,7 @@ const CreateModal = ({
               {t('common:core.app.more')}
               <ChevronRightIcon w={4} h={4} />
             </Flex>
-          )}
+          )} */}
         </Flex>
 
         {isTemplateMode ? (

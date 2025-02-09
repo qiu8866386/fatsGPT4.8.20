@@ -331,16 +331,16 @@ const CollectionCard = () => {
                                     }
                                   ]
                                 : []),
-                              {
-                                label: (
-                                  <Flex alignItems={'center'}>
-                                    <MyIcon name={'common/file/move'} w={'0.9rem'} mr={2} />
-                                    {t('common:Move')}
-                                  </Flex>
-                                ),
-                                onClick: () =>
-                                  setMoveCollectionData({ collectionId: collection._id })
-                              },
+                              // {
+                              //   label: (
+                              //     <Flex alignItems={'center'}>
+                              //       <MyIcon name={'common/file/move'} w={'0.9rem'} mr={2} />
+                              //       {t('common:Move')}
+                              //     </Flex>
+                              //   ),
+                              //   onClick: () =>
+                              //     setMoveCollectionData({ collectionId: collection._id })
+                              // },
                               {
                                 label: (
                                   <Flex alignItems={'center'}>

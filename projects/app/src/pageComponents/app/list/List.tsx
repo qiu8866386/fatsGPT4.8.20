@@ -199,9 +199,9 @@ const ListItem = () => {
                   <Box flex={'1 0 0'} color={'myGray.900'}>
                     {app.name}
                   </Box>
-                  <Box mr={'-1.25rem'}>
+                  {/* <Box mr={'-1.25rem'}>
                     <AppTypeTag type={app.type} />
-                  </Box>
+                  </Box> */}
                 </HStack>
                 <Box
                   flex={['1 0 60px', '1 0 72px']}
@@ -228,12 +228,12 @@ const ListItem = () => {
                       avatarSize="1rem"
                       spacing={0.5}
                     />
-                    <PermissionIconText
+                    {/* <PermissionIconText
                       private={app.private}
                       color={'myGray.500'}
                       iconColor={'myGray.400'}
                       w={'0.875rem'}
-                    />
+                    /> */}
                   </HStack>
 
                   <HStack>
@@ -260,106 +260,106 @@ const ListItem = () => {
                             />
                           }
                           menuList={[
-                            ...([AppTypeEnum.simple, AppTypeEnum.workflow].includes(app.type)
-                              ? [
-                                  {
-                                    children: [
-                                      {
-                                        icon: 'core/chat/chatLight',
-                                        type: 'grayBg' as MenuItemType,
-                                        label: t('app:go_to_chat'),
-                                        onClick: () => {
-                                          router.push(`/chat?appId=${app._id}`);
-                                        }
-                                      }
-                                    ]
-                                  }
-                                ]
-                              : []),
-                            ...([AppTypeEnum.plugin].includes(app.type)
-                              ? [
-                                  {
-                                    children: [
-                                      {
-                                        icon: 'core/chat/chatLight',
-                                        type: 'grayBg' as MenuItemType,
-                                        label: t('app:go_to_run'),
-                                        onClick: () => {
-                                          router.push(`/chat?appId=${app._id}`);
-                                        }
-                                      }
-                                    ]
-                                  }
-                                ]
-                              : []),
-                            ...(app.permission.hasManagePer
-                              ? [
-                                  {
-                                    children: [
-                                      {
-                                        icon: 'edit',
-                                        type: 'grayBg' as MenuItemType,
-                                        label: t('common:dataset.Edit Info'),
-                                        onClick: () => {
-                                          if (app.type === AppTypeEnum.httpPlugin) {
-                                            setEditHttpPlugin({
-                                              id: app._id,
-                                              name: app.name,
-                                              avatar: app.avatar,
-                                              intro: app.intro,
-                                              pluginData: app.pluginData
-                                            });
-                                          } else {
-                                            setEditedApp({
-                                              id: app._id,
-                                              avatar: app.avatar,
-                                              name: app.name,
-                                              intro: app.intro
-                                            });
-                                          }
-                                        }
-                                      },
-                                      ...(folderDetail?.type === AppTypeEnum.httpPlugin &&
-                                      !(parentApp ? parentApp.permission : app.permission)
-                                        .hasManagePer
-                                        ? []
-                                        : [
-                                            {
-                                              icon: 'common/file/move',
-                                              type: 'grayBg' as MenuItemType,
-                                              label: t('common:common.folder.Move to'),
-                                              onClick: () => setMoveAppId(app._id)
-                                            }
-                                          ]),
-                                      ...(app.permission.hasManagePer
-                                        ? [
-                                            {
-                                              icon: 'key',
-                                              type: 'grayBg' as MenuItemType,
-                                              label: t('common:permission.Permission'),
-                                              onClick: () => setEditPerAppIndex(index)
-                                            }
-                                          ]
-                                        : [])
-                                    ]
-                                  }
-                                ]
-                              : []),
-                            ...(AppFolderTypeList.includes(app.type)
-                              ? []
-                              : [
-                                  {
-                                    children: [
-                                      {
-                                        icon: 'copy',
-                                        type: 'grayBg' as MenuItemType,
-                                        label: t('app:copy_one_app'),
-                                        onClick: () =>
-                                          openConfirmCopy(() => onclickCopy({ appId: app._id }))()
-                                      }
-                                    ]
-                                  }
-                                ]),
+                            // ...([AppTypeEnum.simple, AppTypeEnum.workflow].includes(app.type)
+                            //   ? [
+                            //       {
+                            //         children: [
+                            //           {
+                            //             icon: 'core/chat/chatLight',
+                            //             type: 'grayBg' as MenuItemType,
+                            //             label: t('app:go_to_chat'),
+                            //             onClick: () => {
+                            //               router.push(`/chat?appId=${app._id}`);
+                            //             }
+                            //           }
+                            //         ]
+                            //       }
+                            //     ]
+                            //   : []),
+                            // ...([AppTypeEnum.plugin].includes(app.type)
+                            //   ? [
+                            //       {
+                            //         children: [
+                            //           {
+                            //             icon: 'core/chat/chatLight',
+                            //             type: 'grayBg' as MenuItemType,
+                            //             label: t('app:go_to_run'),
+                            //             onClick: () => {
+                            //               router.push(`/chat?appId=${app._id}`);
+                            //             }
+                            //           }
+                            //         ]
+                            //       }
+                            //     ]
+                            //   : []),
+                            // ...(app.permission.hasManagePer
+                            //   ? [
+                            //       {
+                            //         children: [
+                            //           {
+                            //             icon: 'edit',
+                            //             type: 'grayBg' as MenuItemType,
+                            //             label: t('common:dataset.Edit Info'),
+                            //             onClick: () => {
+                            //               if (app.type === AppTypeEnum.httpPlugin) {
+                            //                 setEditHttpPlugin({
+                            //                   id: app._id,
+                            //                   name: app.name,
+                            //                   avatar: app.avatar,
+                            //                   intro: app.intro,
+                            //                   pluginData: app.pluginData
+                            //                 });
+                            //               } else {
+                            //                 setEditedApp({
+                            //                   id: app._id,
+                            //                   avatar: app.avatar,
+                            //                   name: app.name,
+                            //                   intro: app.intro
+                            //                 });
+                            //               }
+                            //             }
+                            //           },
+                            //           ...(folderDetail?.type === AppTypeEnum.httpPlugin &&
+                            //           !(parentApp ? parentApp.permission : app.permission)
+                            //             .hasManagePer
+                            //             ? []
+                            //             : [
+                            //                 {
+                            //                   icon: 'common/file/move',
+                            //                   type: 'grayBg' as MenuItemType,
+                            //                   label: t('common:common.folder.Move to'),
+                            //                   onClick: () => setMoveAppId(app._id)
+                            //                 }
+                            //               ]),
+                            //           ...(app.permission.hasManagePer
+                            //             ? [
+                            //                 {
+                            //                   icon: 'key',
+                            //                   type: 'grayBg' as MenuItemType,
+                            //                   label: t('common:permission.Permission'),
+                            //                   onClick: () => setEditPerAppIndex(index)
+                            //                 }
+                            //               ]
+                            //             : [])
+                            //         ]
+                            //       }
+                            //     ]
+                            //   : []),
+                            // ...(AppFolderTypeList.includes(app.type)
+                            //   ? []
+                            //   : [
+                            //       {
+                            //         children: [
+                            //           {
+                            //             icon: 'copy',
+                            //             type: 'grayBg' as MenuItemType,
+                            //             label: t('app:copy_one_app'),
+                            //             onClick: () =>
+                            //               openConfirmCopy(() => onclickCopy({ appId: app._id }))()
+                            //           }
+                            //         ]
+                            //       }
+                            //     ]),
                             ...(app.permission.isOwner
                               ? [
                                   {

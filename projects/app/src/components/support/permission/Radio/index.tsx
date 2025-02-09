@@ -21,13 +21,13 @@ const PermissionRadio = ({
           title: t('common:permission.Private'),
           desc: t('common:permission.Private Tip'),
           value: PermissionTypeEnum.private
-        },
-        {
-          icon: 'support/permission/publicLight',
-          title: t('common:permission.Public'),
-          desc: t('common:permission.Public Tip'),
-          value: PermissionTypeEnum.public
         }
+        // {
+        //   icon: 'support/permission/publicLight',
+        //   title: t('common:permission.Public'),
+        //   desc: t('common:permission.Public Tip'),
+        //   value: PermissionTypeEnum.public
+        // }
       ]}
       value={value}
       onChange={(e) => onChange(e as `${PermissionTypeEnum}`)}

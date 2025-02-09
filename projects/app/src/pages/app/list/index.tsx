@@ -150,19 +150,19 @@ const MyApps = () => {
                 {
                   label: t('app:type.All'),
                   value: 'ALL'
-                },
-                {
-                  label: t('app:type.Simple bot'),
-                  value: AppTypeEnum.simple
-                },
-                {
-                  label: t('app:type.Workflow bot'),
-                  value: AppTypeEnum.workflow
-                },
-                {
-                  label: t('app:type.Plugin'),
-                  value: AppTypeEnum.plugin
                 }
+                // {
+                //   label: t('app:type.Simple bot'),
+                //   value: AppTypeEnum.simple
+                // },
+                // {
+                //   label: t('app:type.Workflow bot'),
+                //   value: AppTypeEnum.workflow
+                // },
+                // {
+                //   label: t('app:type.Plugin'),
+                //   value: AppTypeEnum.plugin
+                // }
               ]}
               value={appType}
               inlineStyles={{ px: 0.5 }}
@@ -184,7 +184,7 @@ const MyApps = () => {
 
             {isPc && RenderSearchInput}
 
-            {isPc && (
+            {/* {isPc && (
               <Flex
                 alignItems={'center'}
                 gap={1.5}
@@ -209,7 +209,7 @@ const MyApps = () => {
                 <MyImage src={'/imgs/app/templateFill.svg'} w={'18px'} />
                 {t('app:template_market')}
               </Flex>
-            )}
+            )} */}
 
             {(folderDetail
               ? folderDetail.permission.hasWritePer && folderDetail?.type !== AppTypeEnum.httpPlugin
@@ -224,65 +224,65 @@ const MyApps = () => {
                 menuList={[
                   {
                     children: [
-                      {
-                        icon: 'core/app/simpleBot',
-                        label: t('app:type.Simple bot'),
-                        description: t('app:type.Create simple bot tip'),
-                        onClick: () => setCreateAppType(AppTypeEnum.simple)
-                      },
+                      // {
+                      //   icon: 'core/app/simpleBot',
+                      //   label: t('app:type.Simple bot'),
+                      //   description: t('app:type.Create simple bot tip'),
+                      //   onClick: () => setCreateAppType(AppTypeEnum.simple)
+                      // },
                       {
                         icon: 'core/app/type/workflowFill',
                         label: t('app:type.Workflow bot'),
                         description: t('app:type.Create workflow tip'),
                         onClick: () => setCreateAppType(AppTypeEnum.workflow)
-                      },
-                      {
-                        icon: 'core/app/type/pluginFill',
-                        label: t('app:type.Plugin'),
-                        description: t('app:type.Create one plugin tip'),
-                        onClick: () => setCreateAppType(AppTypeEnum.plugin)
-                      },
-                      {
-                        icon: 'core/app/type/httpPluginFill',
-                        label: t('app:type.Http plugin'),
-                        description: t('app:type.Create http plugin tip'),
-                        onClick: onOpenCreateHttpPlugin
                       }
-                    ]
-                  },
-                  {
-                    children: [
-                      {
-                        icon: 'core/app/type/jsonImport',
-                        label: t('app:type.Import from json'),
-                        description: t('app:type.Import from json tip'),
-                        onClick: onOpenJsonImportModal
-                      }
-                    ]
-                  },
-                  ...(isPc
-                    ? []
-                    : [
-                        {
-                          children: [
-                            {
-                              icon: '/imgs/app/templateFill.svg',
-                              label: t('app:template_market'),
-                              description: t('app:template_market_description'),
-                              onClick: () => setTemplateModalType('all')
-                            }
-                          ]
-                        }
-                      ]),
-                  {
-                    children: [
-                      {
-                        icon: FolderIcon,
-                        label: t('common:Folder'),
-                        onClick: () => setEditFolder({})
-                      }
+                      // {
+                      //   icon: 'core/app/type/pluginFill',
+                      //   label: t('app:type.Plugin'),
+                      //   description: t('app:type.Create one plugin tip'),
+                      //   onClick: () => setCreateAppType(AppTypeEnum.plugin)
+                      // }
+                      // {
+                      //   icon: 'core/app/type/httpPluginFill',
+                      //   label: t('app:type.Http plugin'),
+                      //   description: t('app:type.Create http plugin tip'),
+                      //   onClick: onOpenCreateHttpPlugin
+                      // }
                     ]
                   }
+                  // {
+                  //   children: [
+                  //     {
+                  //       icon: 'core/app/type/jsonImport',
+                  //       label: t('app:type.Import from json'),
+                  //       description: t('app:type.Import from json tip'),
+                  //       onClick: onOpenJsonImportModal
+                  //     }
+                  //   ]
+                  // },
+                  // ...(isPc
+                  //   ? []
+                  //   : [
+                  //       {
+                  //         children: [
+                  //           {
+                  //             icon: '/imgs/app/templateFill.svg',
+                  //             label: t('app:template_market'),
+                  //             description: t('app:template_market_description'),
+                  //             onClick: () => setTemplateModalType('all')
+                  //           }
+                  //         ]
+                  //       }
+                  //     ]),
+                  // {
+                  //   children: [
+                  //     {
+                  //       icon: FolderIcon,
+                  //       label: t('common:Folder'),
+                  //       onClick: () => setEditFolder({})
+                  //     }
+                  //   ]
+                  // }
                 ]}
               />
             )}

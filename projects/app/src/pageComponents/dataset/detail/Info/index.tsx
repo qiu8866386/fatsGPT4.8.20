@@ -163,7 +163,7 @@ const Info = ({ datasetId }: { datasetId: string }) => {
           <Box fontSize={'mini'}>{datasetDetail._id}</Box>
         </Flex>
 
-        <Box mt={5} w={'100%'}>
+        {/* <Box mt={5} w={'100%'}>
           <Flex alignItems={'center'} fontSize={'mini'}>
             <FormLabel fontWeight={'500'} flex={'1 0 0'}>
               {t('common:core.ai.model.Vector Model')}
@@ -200,9 +200,9 @@ const Info = ({ datasetId }: { datasetId: string }) => {
               }}
             />
           </Box>
-        </Box>
+        </Box> */}
 
-        <Box pt={5}>
+        {/* <Box pt={5}>
           <FormLabel fontSize={'mini'} fontWeight={'500'}>
             {t('common:core.ai.model.Dataset Agent Model')}
           </FormLabel>
@@ -223,7 +223,7 @@ const Info = ({ datasetId }: { datasetId: string }) => {
               }}
             />
           </Box>
-        </Box>
+        </Box> */}
 
         {feConfigs?.isPlus && (
           <Flex alignItems={'center'} pt={5}>
@@ -348,7 +348,7 @@ const Info = ({ datasetId }: { datasetId: string }) => {
         )}
       </Box>
 
-      {datasetDetail.permission.hasManagePer && (
+      {/* {datasetDetail.permission.hasManagePer && (
         <>
           <MyDivider my={4} h={'2px'} maxW={'500px'} />
           <Box>
@@ -384,7 +384,7 @@ const Info = ({ datasetId }: { datasetId: string }) => {
             />
           </Box>
         </>
-      )}
+      )} */}
 
       <ConfirmDelModal />
       <ConfirmRebuildModal countDown={10} />

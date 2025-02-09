@@ -33,11 +33,11 @@ const NavBar = ({ currentTab }: { currentTab: TabEnum }) => {
     {
       label: t('common:core.dataset.Collection'),
       value: TabEnum.collectionCard
-    },
-    { label: t('common:core.dataset.test.Search Test'), value: TabEnum.test },
-    ...(datasetDetail.permission.hasManagePer && !isPc
-      ? [{ label: t('common:common.Config'), value: TabEnum.info }]
-      : [])
+    }
+    // { label: t('common:core.dataset.test.Search Test'), value: TabEnum.test },
+    // ...(datasetDetail.permission.hasManagePer && !isPc
+    //   ? [{ label: t('common:common.Config'), value: TabEnum.info }]
+    //   : [])
   ];
 
   const setCurrentTab = useCallback(
@@ -156,10 +156,10 @@ const NavBar = ({ currentTab }: { currentTab: TabEnum }) => {
                   bg: 'myGray.05'
                 }}
               >
-                <MyIcon name={'common/monitor'} w={'18px'} h={'18px'} color={'myGray.500'} />
+                {/* <MyIcon name={'common/monitor'} w={'18px'} h={'18px'} color={'myGray.500'} />
                 <Box color={'myGray.600'} ml={1.5} fontWeight={500} userSelect={'none'}>
                   {t('common:core.dataset.training.tag')}
-                </Box>
+                </Box> */}
               </Flex>
             }
           >

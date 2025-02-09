@@ -316,38 +316,38 @@ function List() {
                             menuList={[
                               {
                                 children: [
-                                  {
-                                    icon: 'edit',
-                                    label: t('common:dataset.Edit Info'),
-                                    onClick: () =>
-                                      setEditedDataset({
-                                        id: dataset._id,
-                                        name: dataset.name,
-                                        intro: dataset.intro,
-                                        avatar: dataset.avatar
-                                      })
-                                  },
-                                  ...((parentDataset ? parentDataset : dataset)?.permission
-                                    .hasManagePer
-                                    ? [
-                                        {
-                                          icon: 'common/file/move',
-                                          label: t('common:Move'),
-                                          onClick: () => {
-                                            setMoveDatasetId(dataset._id);
-                                          }
-                                        }
-                                      ]
-                                    : []),
-                                  ...(dataset.permission.hasManagePer
-                                    ? [
-                                        {
-                                          icon: 'key',
-                                          label: t('common:permission.Permission'),
-                                          onClick: () => setEditPerDatasetIndex(index)
-                                        }
-                                      ]
-                                    : [])
+                                  // {
+                                  //   icon: 'edit',
+                                  //   label: t('common:dataset.Edit Info'),
+                                  //   onClick: () =>
+                                  //     setEditedDataset({
+                                  //       id: dataset._id,
+                                  //       name: dataset.name,
+                                  //       intro: dataset.intro,
+                                  //       avatar: dataset.avatar
+                                  //     })
+                                  // },
+                                  // ...((parentDataset ? parentDataset : dataset)?.permission
+                                  //   .hasManagePer
+                                  //   ? [
+                                  //       {
+                                  //         icon: 'common/file/move',
+                                  //         label: t('common:Move'),
+                                  //         onClick: () => {
+                                  //           setMoveDatasetId(dataset._id);
+                                  //         }
+                                  //       }
+                                  //     ]
+                                  //   : []),
+                                  // ...(dataset.permission.hasManagePer
+                                  //   ? [
+                                  //       {
+                                  //         icon: 'key',
+                                  //         label: t('common:permission.Permission'),
+                                  //         onClick: () => setEditPerDatasetIndex(index)
+                                  //       }
+                                  //     ]
+                                  //   : [])
                                 ]
                               },
                               ...(dataset.type != DatasetTypeEnum.folder
