@@ -8,6 +8,7 @@ import { addHours } from 'date-fns';
 
 export const maxImgSize = 1024 * 1024 * 12;
 const base64MimeRegex = /data:image\/([^\)]+);base64/;
+
 export async function uploadMongoImg({
   base64Img,
   teamId,
@@ -28,7 +29,7 @@ export async function uploadMongoImg({
     return Promise.reject('Invalid image mime type');
   }
 
-  const mime = `image/${base64Mime.match(base64MimeRegex)?.[1] ?? 'image/jpeg'}`;
+  const mime = `image/${base64Mime.match(base64MimeRegex)?.[1] ?? 'jpeg'}`;
   const binary = Buffer.from(base64Data, 'base64');
   const extension = mime.split('/')[1];
 
@@ -40,7 +41,9 @@ export async function uploadMongoImg({
     expiredTime: forever ? undefined : addHours(new Date(), 1)
   });
 
-  return `${process.env.NEXT_PUBLIC_BASE_URL || ''}${imageBaseUrl}${String(_id)}.${extension}`;
+  // 确保 IP 和端口号在路径中
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/$/, '') || 'https://sec.csic.cn/';
+  return `${baseUrl}${imageBaseUrl}${String(_id)}.${extension}`;
 }
 
 const getIdFromPath = (path?: string) => {
@@ -56,6 +59,7 @@ const getIdFromPath = (path?: string) => {
 
   return id;
 };
+
 // 删除旧的头像，新的头像去除过期时间
 export const refreshSourceAvatar = async (
   path?: string,
@@ -73,6 +77,7 @@ export const refreshSourceAvatar = async (
     await MongoImage.deleteOne({ _id: oldId }, { session });
   }
 };
+
 export const removeImageByPath = (path?: string, session?: ClientSession) => {
   if (!path) return;
 

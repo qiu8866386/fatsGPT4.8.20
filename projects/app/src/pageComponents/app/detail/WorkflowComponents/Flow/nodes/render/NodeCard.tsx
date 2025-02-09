@@ -272,7 +272,7 @@ const NodeCard = (props: Props) => {
               {!!nodeTemplate?.diagram && node?.courseUrl && (
                 <Box bg={'myGray.300'} w={'1px'} h={'12px'} ml={1} mr={0.5} />
               )}
-              {!!(node?.courseUrl || nodeTemplate?.userGuide) && !hasNewVersion && (
+              {/* {!!(node?.courseUrl || nodeTemplate?.userGuide) && !hasNewVersion && (
                 <UseGuideModal
                   title={nodeTemplate?.name}
                   iconSrc={nodeTemplate?.avatar}
@@ -285,7 +285,7 @@ const NodeCard = (props: Props) => {
                     </MyTooltip>
                   )}
                 </UseGuideModal>
-              )}
+              )} */}
             </Flex>
             <NodeIntro nodeId={nodeId} intro={intro} />
           </Box>

@@ -54,7 +54,7 @@ export const PermissionList: PermissionListType = {
   [PermissionKeyEnum.read]: {
     name: i18nT('common:permission.read'),
     description: '',
-    value: 0b100,
+    value: 0b110,
     checkBoxType: 'single'
   },
   [PermissionKeyEnum.write]: {
