@@ -20,10 +20,10 @@ export const PermissionTypeMap = {
     iconLight: 'support/permission/privateLight',
     label: 'permission.Private'
   },
-  // [PermissionTypeEnum.public]: {
-  //   iconLight: 'support/permission/publicLight',
-  //   label: 'permission.Public'
-  // },
+  [PermissionTypeEnum.public]: {
+    iconLight: 'support/permission/publicLight',
+    label: 'permission.Public'
+  },
   [PermissionTypeEnum.publicRead]: {
     iconLight: 'support/permission/publicLight',
     label: i18nT('user:permission.team_read')

@@ -39,9 +39,12 @@ const AccountContainer = ({
   const router = useRouter();
   const { isPc } = useSystem();
 
+  // const currentTab = useMemo(() => {
+  //   return router.pathname.split('/').pop() as TabEnum;
+  // }, [router.pathname]);
   const currentTab = useMemo(() => {
-    return router.pathname.split('/').pop() as TabEnum;
-  }, [router.pathname]);
+    return TabEnum.model;
+  }, []);
 
   const tabList = useRef([
     // {
