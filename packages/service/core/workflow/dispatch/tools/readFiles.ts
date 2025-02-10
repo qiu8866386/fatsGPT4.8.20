@@ -13,6 +13,7 @@ import { ChatRoleEnum } from '@fastgpt/global/core/chat/constants';
 import { ChatItemType, UserChatItemValueItemType } from '@fastgpt/global/core/chat/type';
 import { parseFileExtensionFromUrl } from '@fastgpt/global/common/string/tools';
 import { addLog } from '../../../../common/system/log';
+import { log } from 'console';
 
 type Props = ModuleDispatchProps<{
   [NodeInputKeyEnum.fileUrlList]: string[];
@@ -167,6 +168,7 @@ export const getFileContentFromLinks = async ({
             baseURL: serverRequestBaseUrl,
             responseType: 'arraybuffer'
           });
+          console.log('Successfully fetched file buffer:', response);
 
           const buffer = Buffer.from(response.data, 'binary');
 
