@@ -56,7 +56,7 @@ const AppCard = ({ showSaveStatus, isSaved }: { showSaveStatus: boolean; isSaved
                 <MyIcon name={'edit'} w={'16px'} mr={2} />
                 <Box fontSize={'sm'}>{t('app:edit_info')}</Box>
               </MyBox>
-              <MyBox
+              {/* <MyBox
                 display={'flex'}
                 size={'md'}
                 px={1}
@@ -68,7 +68,7 @@ const AppCard = ({ showSaveStatus, isSaved }: { showSaveStatus: boolean; isSaved
               >
                 <MyIcon name={'key'} w={'16px'} mr={2} />
                 <Box fontSize={'sm'}>{t('app:Role_setting')}</Box>
-              </MyBox>
+              </MyBox> */}
               <Box w={'full'} h={'1px'} bg={'myGray.200'} my={1} />
               <MyBox
                 display={'flex'}

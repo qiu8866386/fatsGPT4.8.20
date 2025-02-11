@@ -136,9 +136,9 @@ const FolderSlideCard = ({
                   return (
                     <>
                       <Flex alignItems="center" justifyContent="space-between">
-                        <Box fontSize={'sm'} color={'myGray.500'}>
+                        {/* <Box fontSize={'sm'} color={'myGray.500'}>
                           {t('common:permission.Collaborator')}
-                        </Box>
+                        </Box> */}
                         {managePer.permission.hasManagePer && (
                           <HStack spacing={3}>
                             <MyTooltip label={t('common:permission.Manage')}>

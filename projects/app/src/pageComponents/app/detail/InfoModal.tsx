@@ -206,7 +206,7 @@ const InfoModal = ({ onClose }: { onClose: () => void }) => {
                 {({ MemberListCard, onOpenManageModal, onOpenAddMember }) => {
                   return (
                     <>
-                      <Flex
+                      {/* <Flex
                         alignItems="center"
                         flexDirection="row"
                         justifyContent="space-between"
@@ -232,7 +232,7 @@ const InfoModal = ({ onClose }: { onClose: () => void }) => {
                           </Button>
                         </Flex>
                       </Flex>
-                      <MemberListCard mt={2} p={1.5} bg="myGray.100" borderRadius="md" />
+                      <MemberListCard mt={2} p={1.5} bg="myGray.100" borderRadius="md" /> */}
                     </>
                   );
                 }}

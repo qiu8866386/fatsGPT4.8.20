@@ -64,14 +64,14 @@ const Login = ({ ChineseRedirectUrl }: { ChineseRedirectUrl: string }) => {
       setUserInfo(res.user);
 
       // Check that the model is available
-      if (res.user.username === 'root' && llmModelList?.length === 0) {
-        toast({
-          status: 'warning',
-          title: t('login:model_not_config')
-        });
-        router.push('/account/model');
-        return;
-      }
+      // if (res.user.username === 'root' && llmModelList?.length === 0) {
+      //   toast({
+      //     status: 'warning',
+      //     title: t('login:model_not_config')
+      //   });
+      //   router.push('/account/model');
+      //   return;
+      // }
 
       const decodeLastRoute = decodeURIComponent(lastRoute);
       // 检查是否是当前的 route
